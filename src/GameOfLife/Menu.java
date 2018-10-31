@@ -21,7 +21,6 @@ public class Menu {
          
         int opcionElegida=JOptionPane.showOptionDialog(null, "Eliga el tamaño de la matriz cuadrada", "El Juego de la Vida", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcion, opcion[0]);
         opcionElegida=Integer.parseInt(opcion[opcionElegida]);
-        System.out.println(opcionElegida);
         Tablero tablero = new Tablero(matriz,opcionElegida);
         tablero.imprimirMatriz();
         int continuar = JOptionPane.showConfirmDialog(null, "Desea agregar valores a la matriz?", "El Juego de la Vida", JOptionPane.YES_NO_OPTION);

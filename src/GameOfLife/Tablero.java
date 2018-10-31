@@ -20,7 +20,7 @@ public class Tablero {
     Cell [][] tablero;
 
     public Tablero(Cell[][]matriz, int size) {
-      //  if(size >= MINIMO && size <= MAXIMO ){
+      if(size >= MINIMO && size <= MAXIMO ){
         matriz = new Cell [size][size];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
@@ -28,14 +28,13 @@ public class Tablero {
             }
         }
         tablero = matriz;
-     //   }
+     }
 
     }
     public void imprimirMatriz(){
          String matriz = "";
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
-                
                if (j == tablero.length-1){
                    matriz +=tablero[i][j] + "\t" + "\n";
                    //System.out.print("\n");
@@ -46,7 +45,7 @@ public class Tablero {
             } 
         }
         System.out.println(matriz);
-        JOptionPane.showMessageDialog(null, matriz, "El Juego de la Vida", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, matriz, "El Juego de la Vida", JOptionPane.PLAIN_MESSAGE);
     }
     public void addCell (int rows, int columnsj){
         char x = ' ';
